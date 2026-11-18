@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: .
+      target: runner
+    image: mcd-calc:latest
+    ports:
+      # 對外只開這一個 port，全部經過 nginx
+      - "${WEB_PORT:-8080}:80"
+    restart: unless-stopped

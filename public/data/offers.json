@@ -1,0 +1,2706 @@
+{
+  "meta": {
+    "note": "每筆的 asOf 是那份資料本身的日期，不是抓取日；null 代表來源沒寫日期。verified 改成 true 代表已在 APP 或門市親自確認。"
+  },
+  "currencies": [
+    {
+      "id": "mpoint",
+      "name": "M Point",
+      "earnPerDollar": 1,
+      "note": "APP 會員消費 1 元累積 1 點，在 APP「M Point 樂園」兌換；效期到次年同月底。",
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）；符碼記憶《麥當勞攻略》（2026-03-19）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "dotcard",
+      "name": "點點卡",
+      "earnPerDollar": 0.1,
+      "note": "消費 10 元積 1 點（未滿 10 元不計）。只能在櫃台或官方 LINE「點數商城」兌換，自助點餐機不行；不可加價、不可和其他優惠併用。2026 年中起兌換點數調高、套餐下架。和 M Point 各自獨立，同一筆消費可兩邊一起累積。2025 年度點數效期到 2027-03-31。",
+      "source": "麥當勞官網點點卡兌換商品頁（圖檔 2026-05-27 版，2026-11-18 查）；Heresy's Space〈麥當勞點點卡回饋縮水〉（2026-07-04）；符碼記憶《麥當勞攻略》（2026-03-19）",
+      "asOf": "2026-11-18",
+      "verified": false
+    }
+  ],
+  "items": [
+    {
+      "id": "薯條-小",
+      "name": "薯條（小）",
+      "price": 40,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/french-fries-small.html",
+      "verified": false,
+      "sizeGroup": "薯條",
+      "sizeRank": 1,
+      "portionGroup": "fries",
+      "portion": 240.94,
+      "portionUnit": "kcal",
+      "portionSource": "麥當勞官網營養資訊（2026-11-18 查）"
+    },
+    {
+      "id": "薯條-中",
+      "name": "薯條（中）",
+      "price": 50,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/french-fries-medium.html",
+      "verified": false,
+      "sizeGroup": "薯條",
+      "sizeRank": 2
+    },
+    {
+      "id": "薯條-大",
+      "name": "薯條（大）",
+      "price": 66,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/french-fries-large.html",
+      "verified": false,
+      "sizeGroup": "薯條",
+      "sizeRank": 3,
+      "portionGroup": "fries",
+      "portion": 472.57,
+      "portionUnit": "kcal",
+      "portionSource": "麥當勞官網營養資訊（2026-11-18 查）"
+    },
+    {
+      "id": "蛋捲冰淇淋",
+      "name": "蛋捲冰淇淋",
+      "price": 18,
+      "category": "甜點冰品",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/ice-cream-cone.html",
+      "verified": false,
+      "sizeGroup": "蛋捲冰淇淋",
+      "sizeRank": 1
+    },
+    {
+      "id": "麥克雞塊-4塊",
+      "name": "麥克鷄塊（4塊）",
+      "price": 48,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/chicken-mcnuggets-4-pieces.html",
+      "verified": false,
+      "sizeGroup": "麥克雞塊",
+      "sizeRank": 4,
+      "portionGroup": "nuggets",
+      "portion": 4,
+      "portionUnit": "塊",
+      "portionSource": "品名"
+    },
+    {
+      "id": "麥克雞塊-6塊",
+      "name": "麥克鷄塊（6塊）",
+      "price": 68,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/chicken-mcnuggets-6-pieces.html",
+      "verified": false,
+      "sizeGroup": "麥克雞塊",
+      "sizeRank": 6,
+      "portionGroup": "nuggets",
+      "portion": 6,
+      "portionUnit": "塊",
+      "portionSource": "品名"
+    },
+    {
+      "id": "麥克雞塊-10塊",
+      "name": "麥克鷄塊（10塊）",
+      "price": 109,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/chicken-mcnuggets-10-pieces.html",
+      "verified": false,
+      "sizeGroup": "麥克雞塊",
+      "sizeRank": 10,
+      "portionGroup": "nuggets",
+      "portion": 10,
+      "portionUnit": "塊",
+      "portionSource": "品名"
+    },
+    {
+      "id": "勁辣雞腿堡",
+      "name": "勁辣鷄腿堡",
+      "price": 78,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/spicy-chicken-filet-burger.html",
+      "verified": false
+    },
+    {
+      "id": "大麥克",
+      "name": "大麥克",
+      "price": 78,
+      "category": "主餐",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/big-mac.html",
+      "verified": false
+    },
+    {
+      "id": "OREO冰炫風",
+      "name": "OREO冰炫風",
+      "price": 59,
+      "category": "甜點冰品",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/mcflurry.html",
+      "verified": false
+    },
+    {
+      "id": "雙層牛肉吉事堡",
+      "name": "雙層牛肉吉事堡",
+      "price": 72,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/double-cheese-burger.html",
+      "verified": false
+    },
+    {
+      "id": "四盎司牛肉堡",
+      "name": "四盎司牛肉堡",
+      "price": 92,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/classic-angus-beef-burger.html",
+      "verified": false
+    },
+    {
+      "id": "雙層四盎司牛肉堡",
+      "name": "雙層四盎司牛肉堡",
+      "price": 132,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/double-classic-angus-beef-burger.html",
+      "verified": false
+    },
+    {
+      "id": "辣味四盎司牛肉堡",
+      "name": "辣味四盎司牛肉堡",
+      "price": 92,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/spicy-classic-angus-beef-burger.html",
+      "verified": false
+    },
+    {
+      "id": "辣味雙層四盎司牛肉堡",
+      "name": "辣味雙層四盎司牛肉堡",
+      "price": 132,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/spicy-classic-double-angus-beef-burger.html",
+      "verified": false
+    },
+    {
+      "id": "BLT安格斯黑牛堡",
+      "name": "BLT安格斯牛肉堡",
+      "price": 122,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/blt-angus-beef-burger.html",
+      "verified": false
+    },
+    {
+      "id": "蕈菇安格斯黑牛堡",
+      "name": "蕈菇安格斯牛肉堡",
+      "price": 132,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/mushroom-angus-beef-burger.html",
+      "verified": false
+    },
+    {
+      "id": "麥香雞",
+      "name": "麥香鷄",
+      "price": 48,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/mcchicken.html",
+      "verified": false
+    },
+    {
+      "id": "麥脆雞腿-2塊",
+      "name": "麥脆鷄腿（2塊）",
+      "price": 126,
+      "category": "點心",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/chicken-mccrispy-2-pieces.html",
+      "verified": false,
+      "sizeGroup": "麥脆雞腿",
+      "sizeRank": 2
+    },
+    {
+      "id": "煙燻勁脆雞腿堡",
+      "name": "煙燻勁脆鷄腿堡",
+      "price": 99,
+      "category": "主餐",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/smoky-McCrispy-burger.html",
+      "verified": false
+    },
+    {
+      "id": "肯瓊勁脆雞腿堡",
+      "name": "肯瓊勁脆鷄腿堡",
+      "price": 99,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/cajun-McCrispy-burger.html",
+      "verified": false
+    },
+    {
+      "id": "炭燒醬烤雞腿堡",
+      "name": "炭燒醬烤鷄腿堡",
+      "price": 99,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/smoky-grilled-chicken-burger.html",
+      "verified": false
+    },
+    {
+      "id": "BLT香烙烤雞腿堡",
+      "name": "BLT香烙烤鷄腿堡",
+      "price": 129,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/blt-grilled-chicken-burger-n.html",
+      "verified": false
+    },
+    {
+      "id": "麥香魚",
+      "name": "麥香魚",
+      "price": 52,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/filet-o-fish.html",
+      "verified": false
+    },
+    {
+      "id": "雙層麥香魚",
+      "name": "雙層麥香魚",
+      "price": 92,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/double-filet-o-fish-regular.html",
+      "verified": false
+    },
+    {
+      "id": "藜麥沙拉",
+      "name": "藜麥沙拉",
+      "price": 109,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/quinoa-salad.html",
+      "verified": false
+    },
+    {
+      "id": "藜麥辣脆雞沙拉",
+      "name": "藜麥辣脆鷄沙拉",
+      "price": 139,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/quinoa-salad-with-spicy-fried-chicken-filet.html",
+      "verified": false
+    },
+    {
+      "id": "藜麥香烙烤雞沙拉",
+      "name": "藜麥香烙烤鷄沙拉",
+      "price": 159,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/quinoa-salad-with-grilled-chicken-filet-n.html",
+      "verified": false
+    },
+    {
+      "id": "藜麥鱈魚沙拉",
+      "name": "藜麥鱈魚沙拉",
+      "price": 139,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/quinoa-salad-with-fish-filet.html",
+      "verified": false
+    },
+    {
+      "id": "可口可樂-中",
+      "name": "可口可樂（中）",
+      "price": 38,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/coke-medium.html",
+      "verified": false,
+      "sizeGroup": "可口可樂",
+      "sizeRank": 2
+    },
+    {
+      "id": "可口可樂Zero-中",
+      "name": "可口可樂Zero（中）",
+      "price": 38,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/coke-zero-medium.html",
+      "verified": false,
+      "sizeGroup": "可口可樂Zero",
+      "sizeRank": 2
+    },
+    {
+      "id": "雪碧-中",
+      "name": "雪碧（中）",
+      "price": 38,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/sprite-medium.html",
+      "verified": false,
+      "sizeGroup": "雪碧",
+      "sizeRank": 2
+    },
+    {
+      "id": "熱紅茶-中",
+      "name": "熱紅茶（中）",
+      "price": 38,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/hot-black-tea.html",
+      "verified": false,
+      "sizeGroup": "熱紅茶",
+      "sizeRank": 2
+    },
+    {
+      "id": "四季沙拉-大",
+      "name": "四季沙拉（大）",
+      "price": 55,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/salad-large.html",
+      "verified": false,
+      "sizeGroup": "四季沙拉",
+      "sizeRank": 3
+    },
+    {
+      "id": "麥脆雞腿-1塊",
+      "name": "麥脆鷄腿（1塊）",
+      "price": 68,
+      "category": "點心",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/chicken-mccrispy-thigh-1-pieces.html",
+      "verified": false,
+      "sizeGroup": "麥脆雞腿",
+      "sizeRank": 1
+    },
+    {
+      "id": "海苔風味搖搖薯條",
+      "name": "海苔風味搖搖薯條",
+      "price": 69,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "verified": false
+    },
+    {
+      "id": "吉事漢堡",
+      "name": "吉事漢堡",
+      "price": 48,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/cheese-burger.html",
+      "verified": false
+    },
+    {
+      "id": "勁辣香雞翅",
+      "name": "勁辣香鷄翅（2塊）",
+      "price": 49,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/spicy-chicken-wing-2-pieces.html",
+      "verified": false
+    },
+    {
+      "id": "蘋果派",
+      "name": "蘋果派",
+      "price": 40,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/apple-pie.html",
+      "verified": false
+    },
+    {
+      "id": "大蛋捲冰淇淋",
+      "name": "大蛋捲冰淇淋",
+      "price": 32,
+      "category": "甜點冰品",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/ice-cream-cone-large.html",
+      "verified": false,
+      "sizeGroup": "蛋捲冰淇淋",
+      "sizeRank": 2
+    },
+    {
+      "id": "可口可樂-小",
+      "name": "可口可樂（小）",
+      "price": 33,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/coke.html",
+      "verified": false,
+      "sizeGroup": "可口可樂",
+      "sizeRank": 1
+    },
+    {
+      "id": "可口可樂Zero-小",
+      "name": "可口可樂Zero（小）",
+      "price": 33,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/coke-zero.html",
+      "verified": false,
+      "sizeGroup": "可口可樂Zero",
+      "sizeRank": 1
+    },
+    {
+      "id": "雪碧-小",
+      "name": "雪碧（小）",
+      "price": 33,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/sprite.html",
+      "verified": false,
+      "sizeGroup": "雪碧",
+      "sizeRank": 1
+    },
+    {
+      "id": "冰紅茶檸檬風味-小",
+      "name": "冰紅茶（檸檬風味）（小）",
+      "price": 33,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-black-tea-lemon-flavor.html",
+      "verified": false,
+      "sizeGroup": "冰紅茶檸檬風味",
+      "sizeRank": 1
+    },
+    {
+      "id": "無糖冰紅茶-小",
+      "name": "無糖冰紅茶（小）",
+      "price": 35,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-black-tea-sugar-free.html",
+      "verified": false,
+      "sizeGroup": "無糖冰紅茶",
+      "sizeRank": 1
+    },
+    {
+      "id": "無糖冰綠茶-小",
+      "name": "無糖冰綠茶（小）",
+      "price": 35,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-green-tea-sugar-free.html",
+      "verified": false,
+      "sizeGroup": "無糖冰綠茶",
+      "sizeRank": 1
+    },
+    {
+      "id": "麥克雙牛堡",
+      "name": "麥克雙牛堡",
+      "price": 60,
+      "category": "點心",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/McDouble.html",
+      "verified": false
+    },
+    {
+      "id": "金選那堤-熱-中",
+      "name": "金選那堤（熱-中）",
+      "price": 87,
+      "category": "McCafé",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/select-brew-latte.html",
+      "verified": false,
+      "sizeGroup": "金選那堤-熱",
+      "sizeRank": 2
+    },
+    {
+      "id": "金選那堤-冰-中",
+      "name": "金選那堤（冰-中）",
+      "price": 87,
+      "category": "McCafé",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-select-brew-latte.html",
+      "verified": false,
+      "sizeGroup": "金選那堤-冰",
+      "sizeRank": 2
+    },
+    {
+      "id": "金選美式-熱-中",
+      "name": "金選美式咖啡（熱-中）",
+      "price": 60,
+      "category": "McCafé",
+      "source": "麥當勞官網餐點注意事項（2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/select-brew-americano.html",
+      "verified": false,
+      "sizeGroup": "金選美式-熱",
+      "sizeRank": 2
+    },
+    {
+      "id": "金選美式-冰-中",
+      "name": "金選美式咖啡（冰-中）",
+      "price": 60,
+      "category": "McCafé",
+      "source": "麥當勞官網餐點注意事項（2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-select-brew-americano.html",
+      "verified": false,
+      "sizeGroup": "金選美式-冰",
+      "sizeRank": 2
+    },
+    {
+      "id": "經典那堤-熱-中",
+      "name": "經典那堤（熱-中）",
+      "price": 77,
+      "category": "McCafé",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/latte.html",
+      "verified": false,
+      "sizeGroup": "經典那堤-熱",
+      "sizeRank": 2
+    },
+    {
+      "id": "經典那堤-冰-中",
+      "name": "經典那堤（冰-中）",
+      "price": 77,
+      "category": "McCafé",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-latte.html",
+      "verified": false,
+      "sizeGroup": "經典那堤-冰",
+      "sizeRank": 2
+    },
+    {
+      "id": "經典卡布奇諾-熱-中",
+      "name": "經典卡布奇諾（熱-中）",
+      "price": 61,
+      "category": "McCafé",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/cappuccino.html",
+      "verified": false,
+      "sizeGroup": "經典卡布奇諾-熱",
+      "sizeRank": 2
+    },
+    {
+      "id": "經典卡布奇諾-冰-中",
+      "name": "經典卡布奇諾（冰-中）",
+      "price": 77,
+      "category": "McCafé",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-cappuccino.html",
+      "verified": false,
+      "sizeGroup": "經典卡布奇諾-冰",
+      "sizeRank": 2
+    },
+    {
+      "id": "經典美式咖啡-熱-中",
+      "name": "經典美式咖啡（熱-中）",
+      "price": 50,
+      "category": "McCafé",
+      "source": "麥當勞官網餐點注意事項（2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/americano.html",
+      "verified": false,
+      "sizeGroup": "經典美式咖啡-熱",
+      "sizeRank": 2
+    },
+    {
+      "id": "經典美式咖啡-冰-中",
+      "name": "經典美式咖啡（冰-中）",
+      "price": 50,
+      "category": "McCafé",
+      "source": "麥當勞官網餐點注意事項（2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "conflict": "cashfeel《2026 麥當勞菜單》，11/05 更新 寫 $67",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-americano.html",
+      "verified": false,
+      "sizeGroup": "經典美式咖啡-冰",
+      "sizeRank": 2
+    },
+    {
+      "id": "冰蜂蜜紅茶-大",
+      "name": "冰蜂蜜紅茶（大）",
+      "price": 58,
+      "category": "McCafé",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "conflict": "cashfeel《2026 麥當勞菜單》，11/05 更新 寫 $56",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/honey-black-tea-iced.html",
+      "verified": false,
+      "sizeGroup": "冰蜂蜜紅茶",
+      "sizeRank": 3
+    },
+    {
+      "id": "冰蜂蜜奶茶-大",
+      "name": "冰蜂蜜奶茶（大）",
+      "price": 68,
+      "category": "McCafé",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "conflict": "cashfeel《2026 麥當勞菜單》，11/05 更新 寫 $66",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/honey-milk-tea-iced.html",
+      "verified": false,
+      "sizeGroup": "冰蜂蜜奶茶",
+      "sizeRank": 3
+    },
+    {
+      "id": "熱蜂蜜奶茶-中",
+      "name": "熱蜂蜜奶茶（中）",
+      "price": 68,
+      "category": "McCafé",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "conflict": "cashfeel《2026 麥當勞菜單》，11/05 更新 寫 $66",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/honey-milk-tea-hot.html",
+      "verified": false,
+      "sizeGroup": "熱蜂蜜奶茶",
+      "sizeRank": 2
+    },
+    {
+      "id": "焦糖冰奶茶-大",
+      "name": "焦糖冰奶茶（大）",
+      "price": 68,
+      "category": "McCafé",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/caramel-milk-tea-iced.html",
+      "verified": false,
+      "sizeGroup": "焦糖冰奶茶",
+      "sizeRank": 3
+    },
+    {
+      "id": "冰奶茶-大",
+      "name": "冰奶茶（大）",
+      "price": 50,
+      "category": "飲料",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "conflict": "cashfeel《2026 麥當勞菜單》，11/05 更新 寫 $51",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-milk-tea-large.html",
+      "verified": false,
+      "sizeGroup": "冰奶茶",
+      "sizeRank": 3
+    },
+    {
+      "id": "冰紅茶檸檬風味-中",
+      "name": "冰紅茶（檸檬風味）（中）",
+      "price": 41,
+      "category": "飲料",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-black-tea-lemon-flavor-medium.html",
+      "verified": false,
+      "sizeGroup": "冰紅茶檸檬風味",
+      "sizeRank": 2
+    },
+    {
+      "id": "無糖冰紅茶-中",
+      "name": "無糖冰紅茶（中）",
+      "price": 43,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-black-tea-sugar-free-medium.html",
+      "verified": false,
+      "sizeGroup": "無糖冰紅茶",
+      "sizeRank": 2
+    },
+    {
+      "id": "無糖冰綠茶-中",
+      "name": "無糖冰綠茶（中）",
+      "price": 43,
+      "category": "飲料",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/iced-green-tea-sugar-free-medium.html",
+      "verified": false,
+      "sizeGroup": "無糖冰綠茶",
+      "sizeRank": 2
+    },
+    {
+      "id": "玉米濃湯-大",
+      "name": "玉米濃湯（大）",
+      "price": 58,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/corn-soup-large.html",
+      "verified": false,
+      "sizeGroup": "玉米濃湯",
+      "sizeRank": 3
+    },
+    {
+      "id": "雙倍OREO冰炫風",
+      "name": "雙倍OREO冰炫風",
+      "price": 65,
+      "category": "甜點冰品",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/double-oreo-mcflurry.html",
+      "verified": false
+    },
+    {
+      "id": "熱奶茶-中",
+      "name": "熱奶茶（中）",
+      "price": 50,
+      "category": "飲料",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "conflict": "cashfeel《2026 麥當勞菜單》，11/05 更新 寫 $51",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/hot-milk-tea-medium.html",
+      "verified": false,
+      "sizeGroup": "熱奶茶",
+      "sizeRank": 2
+    },
+    {
+      "id": "薯餅",
+      "name": "薯餅",
+      "price": 37,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/hash-browns.html",
+      "verified": false
+    },
+    {
+      "id": "豬肉滿福堡",
+      "name": "豬肉滿福堡",
+      "price": 50,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/sausage-mcmuffin.html",
+      "verified": false
+    },
+    {
+      "id": "豬肉滿福堡加蛋",
+      "name": "豬肉滿福堡加蛋",
+      "price": 60,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/sausage-mcmuffin-with-egg.html",
+      "verified": false
+    },
+    {
+      "id": "無敵豬肉滿福堡加蛋",
+      "name": "無敵豬肉滿福堡加蛋",
+      "price": 80,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/mega-mcmuffin.html",
+      "verified": false
+    },
+    {
+      "id": "滿福堡",
+      "name": "滿福堡",
+      "price": 52,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/egg-mcmuffin.html",
+      "verified": false
+    },
+    {
+      "id": "青蔬滿福堡",
+      "name": "青蔬滿福堡",
+      "price": 60,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/muffin-with-vegetables.html",
+      "verified": false
+    },
+    {
+      "id": "豬肉蛋堡",
+      "name": "豬肉蛋堡",
+      "price": 64,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/egg-burger-with-sausage.html",
+      "verified": false
+    },
+    {
+      "id": "火腿蛋堡",
+      "name": "火腿蛋堡",
+      "price": 52,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/egg-burger-with-canadian-bacon.html",
+      "verified": false
+    },
+    {
+      "id": "吉事蛋堡",
+      "name": "吉事蛋堡",
+      "price": 34,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/egg-burger.html",
+      "verified": false
+    },
+    {
+      "id": "蕈菇嫩蛋焙果堡",
+      "name": "蕈菇嫩蛋焙果堡",
+      "price": 91,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/bagel-burger-with-mushroom.html",
+      "verified": false
+    },
+    {
+      "id": "番茄嫩蛋焙果堡",
+      "name": "番茄嫩蛋焙果堡",
+      "price": 71,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/bagel-burger-with-cheese.html",
+      "verified": false
+    },
+    {
+      "id": "鬆餅-3片",
+      "name": "鬆餅（3片）",
+      "price": 57,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/hotcakes-3-pieces.html",
+      "verified": false
+    },
+    {
+      "id": "豬肉鬆餅",
+      "name": "豬肉鬆餅",
+      "price": 71,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/hotcakes-with-sausage.html",
+      "verified": false
+    },
+    {
+      "id": "雞塊鬆餅大早餐",
+      "name": "麥克鷄塊鬆餅",
+      "price": 111,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "ref": "https://www.mcdonalds.com/tw/zh-tw/product/grand-breakfast.html",
+      "verified": false
+    },
+    {
+      "id": "酪梨醬無敵豬肉滿福堡加蛋",
+      "name": "酪梨醬無敵豬肉滿福堡加蛋",
+      "price": 105,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "酪梨醬豬肉滿福堡加蛋",
+      "name": "酪梨醬豬肉滿福堡加蛋",
+      "price": 85,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "酪梨醬豬肉滿福堡",
+      "name": "酪梨醬豬肉滿福堡",
+      "price": 75,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "酪梨醬滿福堡",
+      "name": "酪梨醬滿福堡",
+      "price": 77,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "酪梨醬青蔬滿福堡",
+      "name": "酪梨醬青蔬滿福堡",
+      "price": 85,
+      "category": "早餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "金薯松露安格斯牛肉黑堡",
+      "name": "金薯松露安格斯牛肉黑堡",
+      "price": 119,
+      "category": "主餐",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "verified": false
+    },
+    {
+      "id": "金薯松露脆雞腿黑堡",
+      "name": "金薯松露脆鷄腿黑堡",
+      "price": 119,
+      "category": "主餐",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "verified": false
+    },
+    {
+      "id": "松露安格斯牛肉黑堡",
+      "name": "松露安格斯牛肉黑堡",
+      "price": 109,
+      "category": "主餐",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "verified": false
+    },
+    {
+      "id": "松露脆雞腿黑堡",
+      "name": "松露脆鷄腿黑堡",
+      "price": 109,
+      "category": "主餐",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "verified": false
+    },
+    {
+      "id": "藜麥黑脆雞沙拉",
+      "name": "藜麥黑脆鷄沙拉",
+      "price": 149,
+      "category": "主餐",
+      "source": "經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "黑森林冰炫風",
+      "name": "黑森林冰炫風",
+      "price": 69,
+      "category": "甜點冰品",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "verified": false
+    },
+    {
+      "id": "巧克力三角派",
+      "name": "巧克力三角派",
+      "price": 50,
+      "category": "點心",
+      "source": "cashfeel《2026 麥當勞菜單》，11/05 更新；經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期），兩邊一致",
+      "asOf": "2026-11-05",
+      "verified": false
+    }
+  ],
+  "deals": [
+    {
+      "id": "value-meal-a",
+      "name": "超值全餐 A 經典配餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "大麥克",
+            "雙層牛肉吉事堡",
+            "四盎司牛肉堡",
+            "雙層四盎司牛肉堡",
+            "辣味四盎司牛肉堡",
+            "辣味雙層四盎司牛肉堡",
+            "BLT安格斯黑牛堡",
+            "蕈菇安格斯黑牛堡",
+            "麥香雞",
+            "勁辣雞腿堡",
+            "麥克雞塊-6塊",
+            "麥克雞塊-10塊",
+            "麥脆雞腿-2塊",
+            "煙燻勁脆雞腿堡",
+            "肯瓊勁脆雞腿堡",
+            "炭燒醬烤雞腿堡",
+            "BLT香烙烤雞腿堡",
+            "麥香魚",
+            "雙層麥香魚",
+            "藜麥沙拉",
+            "藜麥辣脆雞沙拉",
+            "藜麥香烙烤雞沙拉",
+            "藜麥鱈魚沙拉"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "薯條-中"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 18,
+      "start": null,
+      "end": null,
+      "note": "主餐 + 中杯 $38 飲料 + 中薯，套餐價 = 主餐單點 + $70（折 $18）",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "value-meal-b",
+      "name": "超值全餐 B 清爽配餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "大麥克",
+            "雙層牛肉吉事堡",
+            "四盎司牛肉堡",
+            "雙層四盎司牛肉堡",
+            "辣味四盎司牛肉堡",
+            "辣味雙層四盎司牛肉堡",
+            "BLT安格斯黑牛堡",
+            "蕈菇安格斯黑牛堡",
+            "麥香雞",
+            "勁辣雞腿堡",
+            "麥克雞塊-6塊",
+            "麥克雞塊-10塊",
+            "麥脆雞腿-2塊",
+            "煙燻勁脆雞腿堡",
+            "肯瓊勁脆雞腿堡",
+            "炭燒醬烤雞腿堡",
+            "BLT香烙烤雞腿堡",
+            "麥香魚",
+            "雙層麥香魚",
+            "藜麥沙拉",
+            "藜麥辣脆雞沙拉",
+            "藜麥香烙烤雞沙拉",
+            "藜麥鱈魚沙拉"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "四季沙拉-大"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 18,
+      "start": null,
+      "end": null,
+      "note": "主餐 + 中杯 $38 飲料 + 四季沙拉（大），套餐價 = 主餐單點 + $75（折 $18）",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "value-meal-c",
+      "name": "超值全餐 C 勁脆配餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "大麥克",
+            "雙層牛肉吉事堡",
+            "四盎司牛肉堡",
+            "雙層四盎司牛肉堡",
+            "辣味四盎司牛肉堡",
+            "辣味雙層四盎司牛肉堡",
+            "BLT安格斯黑牛堡",
+            "蕈菇安格斯黑牛堡",
+            "麥香雞",
+            "勁辣雞腿堡",
+            "麥克雞塊-6塊",
+            "麥克雞塊-10塊",
+            "麥脆雞腿-2塊",
+            "煙燻勁脆雞腿堡",
+            "肯瓊勁脆雞腿堡",
+            "炭燒醬烤雞腿堡",
+            "BLT香烙烤雞腿堡",
+            "麥香魚",
+            "雙層麥香魚",
+            "藜麥沙拉",
+            "藜麥辣脆雞沙拉",
+            "藜麥香烙烤雞沙拉",
+            "藜麥鱈魚沙拉"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "麥脆雞腿-1塊"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 17,
+      "start": null,
+      "end": null,
+      "note": "主餐 + 中杯 $38 飲料 + 麥脆鷄腿 1 塊，套餐價 = 主餐單點 + $89（折 $17）",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "value-meal-d",
+      "name": "超值全餐 D 炫冰配餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "大麥克",
+            "雙層牛肉吉事堡",
+            "四盎司牛肉堡",
+            "雙層四盎司牛肉堡",
+            "辣味四盎司牛肉堡",
+            "辣味雙層四盎司牛肉堡",
+            "BLT安格斯黑牛堡",
+            "蕈菇安格斯黑牛堡",
+            "麥香雞",
+            "勁辣雞腿堡",
+            "麥克雞塊-6塊",
+            "麥克雞塊-10塊",
+            "麥脆雞腿-2塊",
+            "煙燻勁脆雞腿堡",
+            "肯瓊勁脆雞腿堡",
+            "炭燒醬烤雞腿堡",
+            "BLT香烙烤雞腿堡",
+            "麥香魚",
+            "雙層麥香魚",
+            "藜麥沙拉",
+            "藜麥辣脆雞沙拉",
+            "藜麥香烙烤雞沙拉",
+            "藜麥鱈魚沙拉"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "薯條-小"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "OREO冰炫風"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 33,
+      "start": null,
+      "end": null,
+      "note": "主餐 + 中杯 $38 飲料 + 小薯 + OREO 冰炫風，套餐價 = 主餐單點 + $104（折 $33）",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "value-meal-e",
+      "name": "超值全餐 E 豪吃配餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "大麥克",
+            "雙層牛肉吉事堡",
+            "四盎司牛肉堡",
+            "雙層四盎司牛肉堡",
+            "辣味四盎司牛肉堡",
+            "辣味雙層四盎司牛肉堡",
+            "BLT安格斯黑牛堡",
+            "蕈菇安格斯黑牛堡",
+            "麥香雞",
+            "勁辣雞腿堡",
+            "麥克雞塊-6塊",
+            "麥克雞塊-10塊",
+            "麥脆雞腿-2塊",
+            "煙燻勁脆雞腿堡",
+            "肯瓊勁脆雞腿堡",
+            "炭燒醬烤雞腿堡",
+            "BLT香烙烤雞腿堡",
+            "麥香魚",
+            "雙層麥香魚",
+            "藜麥沙拉",
+            "藜麥辣脆雞沙拉",
+            "藜麥香烙烤雞沙拉",
+            "藜麥鱈魚沙拉"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "薯條-小"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "麥克雞塊-6塊"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 42,
+      "start": null,
+      "end": null,
+      "note": "主餐 + 中杯 $38 飲料 + 小薯 + 6 塊麥克鷄塊，套餐價 = 主餐單點 + $104（折 $42）",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "value-meal-seaweed",
+      "name": "超值全餐 海苔搖搖薯條配餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "大麥克",
+            "雙層牛肉吉事堡",
+            "四盎司牛肉堡",
+            "雙層四盎司牛肉堡",
+            "辣味四盎司牛肉堡",
+            "辣味雙層四盎司牛肉堡",
+            "BLT安格斯黑牛堡",
+            "蕈菇安格斯黑牛堡",
+            "麥香雞",
+            "勁辣雞腿堡",
+            "麥克雞塊-6塊",
+            "麥克雞塊-10塊",
+            "麥脆雞腿-2塊",
+            "煙燻勁脆雞腿堡",
+            "肯瓊勁脆雞腿堡",
+            "炭燒醬烤雞腿堡",
+            "BLT香烙烤雞腿堡",
+            "麥香魚",
+            "雙層麥香魚",
+            "藜麥沙拉",
+            "藜麥辣脆雞沙拉",
+            "藜麥香烙烤雞沙拉",
+            "藜麥鱈魚沙拉"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "海苔風味搖搖薯條"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 21,
+      "start": "2026-10-21",
+      "end": "2026-11-24",
+      "note": "主餐 + 中杯 $38 飲料 + 海苔風味搖搖薯條，套餐價 = 主餐單點 + $86（折 $21）",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "one-plus-one-50",
+      "name": "1+1 星級點 $50",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "吉事漢堡",
+            "麥香雞",
+            "麥克雞塊-4塊",
+            "勁辣香雞翅",
+            "薯條-小",
+            "蘋果派",
+            "大蛋捲冰淇淋"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-小",
+            "可口可樂Zero-小",
+            "雪碧-小",
+            "冰紅茶檸檬風味-小",
+            "無糖冰紅茶-小",
+            "無糖冰綠茶-小",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 50,
+      "start": null,
+      "end": null,
+      "note": "紅區任選一個 + 白區飲料任選一個；10:30 至凌晨供應",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "one-plus-one-69",
+      "name": "1+1 星級點 $69",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "麥克雙牛堡",
+            "麥香魚",
+            "麥克雞塊-6塊",
+            "麥脆雞腿-1塊",
+            "OREO冰炫風"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-小",
+            "可口可樂Zero-小",
+            "雪碧-小",
+            "冰紅茶檸檬風味-小",
+            "無糖冰紅茶-小",
+            "無糖冰綠茶-小",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 69,
+      "start": null,
+      "end": null,
+      "note": "紅區任選一個 + 白區飲料任選一個；10:30 至凌晨供應",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "sweet-card",
+      "name": "甜心卡（買 A 送 B）",
+      "type": "bogo",
+      "fee": 39,
+      "buy": [
+        "金選那堤-熱-中",
+        "金選那堤-冰-中",
+        "金選美式-熱-中",
+        "金選美式-冰-中",
+        "經典那堤-熱-中",
+        "經典那堤-冰-中",
+        "經典卡布奇諾-熱-中",
+        "經典卡布奇諾-冰-中",
+        "經典美式咖啡-熱-中",
+        "經典美式咖啡-冰-中",
+        "冰蜂蜜紅茶-大",
+        "冰蜂蜜奶茶-大",
+        "熱蜂蜜奶茶-中",
+        "焦糖冰奶茶-大",
+        "冰奶茶-大",
+        "可口可樂-中",
+        "可口可樂Zero-中",
+        "雪碧-中",
+        "冰紅茶檸檬風味-中",
+        "無糖冰紅茶-中",
+        "無糖冰綠茶-中",
+        "麥克雞塊-4塊",
+        "麥克雞塊-6塊",
+        "麥克雞塊-10塊",
+        "薯條-大",
+        "玉米濃湯-大",
+        "OREO冰炫風",
+        "雙倍OREO冰炫風"
+      ],
+      "get": [
+        "可口可樂-中",
+        "可口可樂Zero-中",
+        "雪碧-中",
+        "冰紅茶檸檬風味-中",
+        "無糖冰紅茶-中",
+        "無糖冰綠茶-中",
+        "經典美式咖啡-熱-中",
+        "經典美式咖啡-冰-中",
+        "熱紅茶-中",
+        "熱奶茶-中",
+        "薯餅",
+        "蛋捲冰淇淋",
+        "薯條-小"
+      ],
+      "start": "2026-03-18",
+      "end": "2027-03-31",
+      "note": "2026 年版每包 39 元，期限內不限次數。薯餅限早餐、小薯 10:30 後。",
+      "source": "售價與期限：cashfeel《麥當勞甜心卡怎麼買》；A/B 品項經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "breakfast-hash-brown",
+      "name": "早餐套餐 薯餅配餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "豬肉滿福堡",
+            "豬肉滿福堡加蛋",
+            "無敵豬肉滿福堡加蛋",
+            "滿福堡",
+            "青蔬滿福堡",
+            "豬肉蛋堡",
+            "火腿蛋堡",
+            "吉事蛋堡",
+            "蕈菇嫩蛋焙果堡",
+            "番茄嫩蛋焙果堡",
+            "鬆餅-3片",
+            "豬肉鬆餅",
+            "雞塊鬆餅大早餐"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "薯餅"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 30,
+      "start": null,
+      "end": null,
+      "note": "早餐主餐 + 中杯 $38 飲料 + 薯餅（折 $30）；早餐時段",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "breakfast-nuggets",
+      "name": "早餐套餐 鷄塊配餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "豬肉滿福堡",
+            "豬肉滿福堡加蛋",
+            "無敵豬肉滿福堡加蛋",
+            "滿福堡",
+            "青蔬滿福堡",
+            "豬肉蛋堡",
+            "火腿蛋堡",
+            "吉事蛋堡",
+            "蕈菇嫩蛋焙果堡",
+            "番茄嫩蛋焙果堡",
+            "鬆餅-3片",
+            "豬肉鬆餅"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "麥克雞塊-4塊"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 21,
+      "start": null,
+      "end": null,
+      "note": "早餐主餐 + 中杯 $38 飲料 + 4 塊麥克鷄塊（折 $21）；早餐時段",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "breakfast-americano",
+      "name": "早餐套餐 美式咖啡配餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "豬肉滿福堡",
+            "豬肉滿福堡加蛋",
+            "無敵豬肉滿福堡加蛋",
+            "滿福堡",
+            "青蔬滿福堡",
+            "豬肉蛋堡",
+            "火腿蛋堡",
+            "吉事蛋堡",
+            "蕈菇嫩蛋焙果堡",
+            "番茄嫩蛋焙果堡",
+            "鬆餅-3片",
+            "豬肉鬆餅",
+            "雞塊鬆餅大早餐"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "經典美式咖啡-熱-中",
+            "經典美式咖啡-冰-中"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 15,
+      "start": null,
+      "end": null,
+      "note": "早餐主餐 + 經典美式咖啡（折 $15）；早餐時段",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "breakfast-drink",
+      "name": "早餐套餐 飲料配餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "豬肉滿福堡",
+            "豬肉滿福堡加蛋",
+            "無敵豬肉滿福堡加蛋",
+            "滿福堡",
+            "青蔬滿福堡",
+            "豬肉蛋堡",
+            "火腿蛋堡",
+            "吉事蛋堡",
+            "蕈菇嫩蛋焙果堡",
+            "番茄嫩蛋焙果堡",
+            "鬆餅-3片",
+            "豬肉鬆餅",
+            "雞塊鬆餅大早餐"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 13,
+      "start": null,
+      "end": null,
+      "note": "早餐主餐 + 中杯 $38 飲料（折 $13）；早餐時段",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "breakfast-avocado",
+      "name": "早餐套餐 薯餅配餐（酪梨醬滿福系列）",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "酪梨醬無敵豬肉滿福堡加蛋",
+            "酪梨醬豬肉滿福堡加蛋",
+            "酪梨醬豬肉滿福堡",
+            "酪梨醬滿福堡",
+            "酪梨醬青蔬滿福堡"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "薯餅"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 30,
+      "start": "2026-11-04",
+      "end": "2026-12-15",
+      "note": "酪梨醬滿福系列 + 中杯 $38 飲料 + 薯餅（折 $30）",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "truffle-combo",
+      "name": "松露黑堡 經典套餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "金薯松露安格斯牛肉黑堡",
+            "金薯松露脆雞腿黑堡",
+            "松露安格斯牛肉黑堡",
+            "松露脆雞腿黑堡",
+            "藜麥黑脆雞沙拉"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "薯條-中"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 18,
+      "start": "2026-10-21",
+      "end": "2026-11-24",
+      "note": "松露黑堡系列 + 中杯 $38 飲料 + 中薯（折 $18）",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "truffle-share-box",
+      "name": "金薯松露黑堡分享盒",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "金薯松露安格斯牛肉黑堡",
+            "金薯松露脆雞腿黑堡"
+          ],
+          "qty": 2
+        },
+        {
+          "ids": [
+            "麥克雞塊-10塊"
+          ],
+          "qty": 2
+        },
+        {
+          "ids": [
+            "薯條-大"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 450,
+      "start": "2026-10-21",
+      "end": "2026-11-24",
+      "note": "金薯松露黑堡 2 份 + 20 塊麥克鷄塊 + 大薯",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "halloween-ice",
+      "name": "冰酷萬聖黑特餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "金薯松露安格斯牛肉黑堡",
+            "金薯松露脆雞腿黑堡"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "海苔風味搖搖薯條"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "黑森林冰炫風"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 270,
+      "start": "2026-10-21",
+      "end": "2026-11-24",
+      "note": "",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "halloween-pie",
+      "name": "甜派萬聖黑特餐",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "金薯松露安格斯牛肉黑堡",
+            "金薯松露脆雞腿黑堡"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "海苔風味搖搖薯條"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "巧克力三角派"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 250,
+      "start": "2026-10-21",
+      "end": "2026-11-24",
+      "note": "",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "share-nuggets-20-seaweed",
+      "name": "麥克鷄塊分享盒 20 塊（海苔搖搖薯條）",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "麥克雞塊-10塊"
+          ],
+          "qty": 2
+        },
+        {
+          "ids": [
+            "海苔風味搖搖薯條"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 223,
+      "start": "2026-10-21",
+      "end": "2026-11-24",
+      "note": "",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "share-nuggets-30-seaweed",
+      "name": "麥克鷄塊分享盒 30 塊（海苔搖搖薯條）",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "麥克雞塊-10塊"
+          ],
+          "qty": 3
+        },
+        {
+          "ids": [
+            "海苔風味搖搖薯條"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 316,
+      "start": "2026-10-21",
+      "end": "2026-11-24",
+      "note": "",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "share-wings-seaweed",
+      "name": "勁辣香鷄翅分享盒（海苔搖搖薯條）",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "勁辣香雞翅"
+          ],
+          "qty": 6
+        },
+        {
+          "ids": [
+            "海苔風味搖搖薯條"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 267,
+      "start": "2026-10-21",
+      "end": "2026-11-24",
+      "note": "",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "share-nuggets-20",
+      "name": "麥克鷄塊分享盒 20 塊",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "麥克雞塊-10塊"
+          ],
+          "qty": 2
+        },
+        {
+          "ids": [
+            "薯條-大"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 220,
+      "start": null,
+      "end": null,
+      "note": "",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "share-nuggets-30",
+      "name": "麥克鷄塊分享盒 30 塊",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "麥克雞塊-10塊"
+          ],
+          "qty": 3
+        },
+        {
+          "ids": [
+            "薯條-大"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 313,
+      "start": null,
+      "end": null,
+      "note": "",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "share-wings",
+      "name": "勁辣香鷄翅分享盒",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "勁辣香雞翅"
+          ],
+          "qty": 6
+        },
+        {
+          "ids": [
+            "薯條-大"
+          ],
+          "qty": 1
+        }
+      ],
+      "price": 264,
+      "start": null,
+      "end": null,
+      "note": "",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "share-crispy",
+      "name": "麥脆鷄腿分享盒",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "麥脆雞腿-2塊"
+          ],
+          "qty": 3
+        },
+        {
+          "ids": [
+            "薯條-大"
+          ],
+          "qty": 2
+        }
+      ],
+      "price": 453,
+      "start": null,
+      "end": null,
+      "note": "",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "share-nuggets-crispy",
+      "name": "鷄塊鷄腿分享盒",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "麥克雞塊-10塊"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "麥脆雞腿-2塊"
+          ],
+          "qty": 3
+        },
+        {
+          "ids": [
+            "薯條-大"
+          ],
+          "qty": 2
+        }
+      ],
+      "price": 546,
+      "start": null,
+      "end": null,
+      "note": "",
+      "source": "組合規則：麥當勞官網餐點注意事項（2026-11-18 查）；內容與金額經速速湊彙整（它註明取自官方公告與多家菜單，未逐筆標來源與日期）",
+      "asOf": null,
+      "verified": false
+    },
+    {
+      "id": "line-gold-americano-3for3",
+      "name": "金選美式買 3 送 3（LINE 隨買店取）",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "金選美式-熱-中",
+            "金選美式-冰-中"
+          ],
+          "qty": 6
+        }
+      ],
+      "price": 180,
+      "start": "2026-11-09",
+      "end": "2026-11-22",
+      "note": "付 3 杯的錢拿 6 杯；需在 LINE 隨買店取購買",
+      "source": "蘋果仁 2026 麥當勞 11 月優惠整理",
+      "asOf": "2026-11-11",
+      "verified": false
+    },
+    {
+      "id": "line-caramel-6for2",
+      "name": "焦糖冰奶茶買 6 送 2（LINE 隨買店取）",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "焦糖冰奶茶-大"
+          ],
+          "qty": 8
+        }
+      ],
+      "price": 408,
+      "start": "2026-11-09",
+      "end": "2026-11-22",
+      "note": "付 6 杯的錢拿 8 杯；需在 LINE 隨買店取購買",
+      "source": "蘋果仁 2026 麥當勞 11 月優惠整理",
+      "asOf": "2026-11-11",
+      "verified": false
+    },
+    {
+      "id": "anniv-wings-bogo",
+      "name": "APP 週年慶 勁辣香鷄翅買一送一",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "勁辣香雞翅"
+          ],
+          "qty": 2
+        }
+      ],
+      "price": 49,
+      "start": "2026-11-04",
+      "end": "2026-11-17",
+      "note": "週年慶優惠券每週換品項，實際以 APP 為準",
+      "source": "麥當勞官網 APP 回饋頁、蘋果仁 2026 麥當勞 11 月優惠整理",
+      "asOf": "2026-11-11",
+      "verified": false
+    },
+    {
+      "id": "anniv-hashbrown-bogo",
+      "name": "APP 週年慶 薯餅買一送一",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "薯餅"
+          ],
+          "qty": 2
+        }
+      ],
+      "price": 37,
+      "start": "2026-11-04",
+      "end": "2026-11-17",
+      "note": "週年慶優惠券每週換品項，實際以 APP 為準",
+      "source": "麥當勞官網 APP 回饋頁、蘋果仁 2026 麥當勞 11 月優惠整理",
+      "asOf": "2026-11-11",
+      "verified": false
+    },
+    {
+      "id": "anniv-meal-fries",
+      "name": "APP 週年慶 買超值全餐送中薯",
+      "type": "combo",
+      "groups": [
+        {
+          "ids": [
+            "大麥克",
+            "雙層牛肉吉事堡",
+            "四盎司牛肉堡",
+            "雙層四盎司牛肉堡",
+            "辣味四盎司牛肉堡",
+            "辣味雙層四盎司牛肉堡",
+            "BLT安格斯黑牛堡",
+            "蕈菇安格斯黑牛堡",
+            "麥香雞",
+            "勁辣雞腿堡",
+            "麥克雞塊-6塊",
+            "麥克雞塊-10塊",
+            "麥脆雞腿-2塊",
+            "煙燻勁脆雞腿堡",
+            "肯瓊勁脆雞腿堡",
+            "炭燒醬烤雞腿堡",
+            "BLT香烙烤雞腿堡",
+            "麥香魚",
+            "雙層麥香魚",
+            "藜麥沙拉",
+            "藜麥辣脆雞沙拉",
+            "藜麥香烙烤雞沙拉",
+            "藜麥鱈魚沙拉"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "可口可樂-中",
+            "可口可樂Zero-中",
+            "雪碧-中",
+            "熱紅茶-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "薯條-中"
+          ],
+          "qty": 1
+        },
+        {
+          "ids": [
+            "薯條-中"
+          ],
+          "qty": 1
+        }
+      ],
+      "discount": 68,
+      "start": "2026-11-04",
+      "end": "2026-11-17",
+      "note": "以 A 經典配餐估算再多送一份中薯；實際券面以 APP 為準",
+      "source": "麥當勞官網 APP 回饋頁、蘋果仁 2026 麥當勞 11 月優惠整理",
+      "asOf": "2026-11-11",
+      "verified": false
+    }
+  ],
+  "redemptions": [
+    {
+      "id": "mp-01",
+      "currency": "mpoint",
+      "points": 300,
+      "items": [
+        {
+          "id": "蛋捲冰淇淋"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-02",
+      "currency": "mpoint",
+      "points": 300,
+      "items": [
+        {
+          "id": "可口可樂-小"
+        }
+      ],
+      "label": "可樂／Zero／雪碧擇一",
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-03",
+      "currency": "mpoint",
+      "points": 360,
+      "items": [
+        {
+          "id": "無糖冰紅茶-小"
+        }
+      ],
+      "label": "冰無糖紅／綠茶擇一",
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-04",
+      "currency": "mpoint",
+      "points": 800,
+      "items": [
+        {
+          "id": "薯餅"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-05",
+      "currency": "mpoint",
+      "points": 800,
+      "items": [
+        {
+          "id": "薯條-小"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-06",
+      "currency": "mpoint",
+      "points": 1200,
+      "items": [
+        {
+          "id": "蘋果派"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-07",
+      "currency": "mpoint",
+      "points": 1200,
+      "items": [
+        {
+          "id": "經典美式咖啡-熱-中"
+        }
+      ],
+      "label": "冰／熱擇一",
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-08",
+      "currency": "mpoint",
+      "points": 1500,
+      "items": [
+        {
+          "id": "麥克雞塊-4塊"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-09",
+      "currency": "mpoint",
+      "points": 2000,
+      "items": [
+        {
+          "id": "吉事漢堡"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-10",
+      "currency": "mpoint",
+      "points": 2000,
+      "items": [
+        {
+          "id": "豬肉滿福堡"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-11",
+      "currency": "mpoint",
+      "points": 2000,
+      "items": [
+        {
+          "id": "勁辣香雞翅"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-12",
+      "currency": "mpoint",
+      "points": 2000,
+      "items": [
+        {
+          "id": "冰蜂蜜紅茶-大"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-13",
+      "currency": "mpoint",
+      "points": 2000,
+      "items": [
+        {
+          "id": "焦糖冰奶茶-大"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-14",
+      "currency": "mpoint",
+      "points": 2000,
+      "items": [
+        {
+          "id": "經典那堤-熱-中"
+        }
+      ],
+      "label": "冰／熱擇一",
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-15",
+      "currency": "mpoint",
+      "points": 2700,
+      "items": [
+        {
+          "id": "大麥克"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-16",
+      "currency": "mpoint",
+      "points": 2700,
+      "items": [
+        {
+          "id": "勁辣雞腿堡"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-17",
+      "currency": "mpoint",
+      "points": 2700,
+      "items": [
+        {
+          "id": "四盎司牛肉堡"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "mp-18",
+      "currency": "mpoint",
+      "points": 2800,
+      "items": [
+        {
+          "id": "麥克雞塊-6塊"
+        },
+        {
+          "id": "薯條-中"
+        },
+        {
+          "id": "可口可樂-中"
+        }
+      ],
+      "label": "6 塊鷄塊套餐：中薯＋中可",
+      "start": null,
+      "end": null,
+      "source": "PTT fastfood〈麥當勞點數回饋率計算〉（2024-09-23）",
+      "asOf": "2024-09-23",
+      "verified": false
+    },
+    {
+      "id": "dc-01",
+      "currency": "dotcard",
+      "points": 25,
+      "items": [
+        {
+          "id": "蛋捲冰淇淋"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "麥當勞官網點點卡兌換商品頁（圖檔 2026-05-27 版，2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "verified": false
+    },
+    {
+      "id": "dc-02",
+      "currency": "dotcard",
+      "points": 45,
+      "items": [
+        {
+          "id": "薯餅"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "麥當勞官網點點卡兌換商品頁（圖檔 2026-05-27 版，2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "verified": false
+    },
+    {
+      "id": "dc-03",
+      "currency": "dotcard",
+      "points": 55,
+      "items": [
+        {
+          "id": "滿福堡"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "麥當勞官網點點卡兌換商品頁（圖檔 2026-05-27 版，2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "verified": false
+    },
+    {
+      "id": "dc-04",
+      "currency": "dotcard",
+      "points": 55,
+      "items": [
+        {
+          "id": "麥克雞塊-4塊"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "麥當勞官網點點卡兌換商品頁（圖檔 2026-05-27 版，2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "verified": false
+    },
+    {
+      "id": "dc-05",
+      "currency": "dotcard",
+      "points": 70,
+      "items": [
+        {
+          "id": "OREO冰炫風"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "麥當勞官網點點卡兌換商品頁（圖檔 2026-05-27 版，2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "verified": false
+    },
+    {
+      "id": "dc-06",
+      "currency": "dotcard",
+      "points": 70,
+      "items": [
+        {
+          "id": "薯條-大"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "麥當勞官網點點卡兌換商品頁（圖檔 2026-05-27 版，2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "verified": false
+    },
+    {
+      "id": "dc-07",
+      "currency": "dotcard",
+      "points": 90,
+      "items": [
+        {
+          "id": "勁辣雞腿堡"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "麥當勞官網點點卡兌換商品頁（圖檔 2026-05-27 版，2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "verified": false
+    },
+    {
+      "id": "dc-08",
+      "currency": "dotcard",
+      "points": 90,
+      "items": [
+        {
+          "id": "大麥克"
+        }
+      ],
+      "start": null,
+      "end": null,
+      "source": "麥當勞官網點點卡兌換商品頁（圖檔 2026-05-27 版，2026-11-18 查）",
+      "asOf": "2026-11-18",
+      "verified": false
+    }
+  ],
+  "promos": [
+    {
+      "id": "anniv-mpoint-2026",
+      "name": "APP 週年慶 M Point 兌換 6 折起",
+      "currency": "mpoint",
+      "start": "2026-11-18",
+      "end": "2026-11-24",
+      "rules": [
+        {
+          "items": [
+            "勁辣雞腿堡",
+            "麥克雞塊-10塊"
+          ],
+          "multiplier": 0.6
+        },
+        {
+          "multiplier": 0.8
+        }
+      ],
+      "excludeRedemptions": [
+        "mp-18"
+      ],
+      "note": "勁辣鷄腿堡、10 塊麥克鷄塊 6 折，其他適用單點 8 折；實際點數以 APP 為準。",
+      "source": "麥當勞官網 APP 回饋頁、蘋果仁 2026 麥當勞 11 月優惠整理",
+      "asOf": "2026-11-18",
+      "verified": false
+    }
+  ]
+}

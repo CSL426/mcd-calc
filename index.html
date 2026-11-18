@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>老麥計算機</title>
+  </head>
+  <body>
+    <header class="masthead">
+      <div>
+        <h1>老麥計算機</h1>
+        <p class="lede">點數換什麼最划算：每一點折合多少錢，跟甜心卡、套餐和期間優惠比起來還值不值得。前提是你已經有甜心卡。</p>
+      </div>
+      <p class="stamp" id="stamp"></p>
+    </header>
+
+    <div class="draft-banner" id="draft-banner" hidden>
+      <span>目前用的是這台瀏覽器裡的草稿，不是 repo 裡的資料。</span>
+      <button type="button" id="banner-discard">捨棄草稿</button>
+    </div>
+
+    <form class="controls" id="controls" aria-label="計算設定">
+      <label>
+        <span>以哪天計算</span>
+        <input type="date" id="ctl-date" />
+      </label>
+      <label class="check">
+        <input type="checkbox" id="ctl-inactive" />
+        <span>現金優惠也列出已結束、未開始的</span>
+      </label>
+    </form>
+
+    <main>
+      <section aria-labelledby="h-order" class="order">
+        <div class="section-head">
+          <h2 id="h-order">我想吃什麼</h2>
+          <p>選好想吃的東西，幫你把現在能用的套餐、1+1、甜心卡、買送全部試一遍，找出最省的點法。只湊你選的東西，不會叫你多買。</p>
+        </div>
+        <div class="picker">
+          <label class="search">
+            <span class="sr-only">搜尋品項</span>
+            <input type="search" id="pick-search" placeholder="搜尋：薯條、鷄塊、那堤…" autocomplete="off" />
+          </label>
+          <div class="tabs" id="pick-tabs" role="tablist" aria-label="品項類別"></div>
+          <div class="grid" id="pick-grid" aria-live="polite"></div>
+        </div>
+        <ul class="cart" id="cart"></ul>
+        <div class="balances">
+          <label><span>手上的 M Point</span><input type="text" id="bal-mpoint" inputmode="numeric" pattern="[0-9]*" placeholder="0" autocomplete="off" /></label>
+          <label><span>手上的點點卡點數</span><input type="text" id="bal-dotcard" inputmode="numeric" pattern="[0-9]*" placeholder="0" autocomplete="off" /></label>
+        </div>
+        <div class="plans" id="plans"></div>
+      </section>
+
+      <section aria-labelledby="h-rank">
+        <div class="section-head">
+          <h2 id="h-rank">點數兌換排行</h2>
+          <p>依回饋率排序：每消費 1 元拿到的點數，拿去換這個品項時折合多少錢。</p>
+        </div>
+        <div id="promos"></div>
+        <div class="filters" aria-label="篩選兌換項目">
+          <label class="search">
+            <span class="sr-only">搜尋兌換品項</span>
+            <input type="search" id="rank-search" placeholder="搜尋品項" autocomplete="off" />
+          </label>
+          <div class="seg" id="rank-currency" role="radiogroup" aria-label="點數種類"></div>
+          <div class="seg" id="rank-kind" role="radiogroup" aria-label="換法">
+            <button type="button" role="radio" data-value="all" aria-checked="true">全部</button>
+            <button type="button" role="radio" data-value="points" aria-checked="false">純點數</button>
+            <button type="button" role="radio" data-value="mixed" aria-checked="false">點數＋現金</button>
+          </div>
+          <div class="seg" id="rank-sort" role="radiogroup" aria-label="排序">
+            <button type="button" role="radio" data-value="rate" aria-checked="true">回饋率</button>
+            <button type="button" role="radio" data-value="points" aria-checked="false">點數少→多</button>
+          </div>
+          <label class="check">
+            <input type="checkbox" id="rank-affordable" />
+            <span>只看我換得起的</span>
+          </label>
+        </div>
+        <p class="filter-count" id="rank-count"></p>
+        <ol class="rank" id="rank"></ol>
+      </section>
+
+      <section aria-labelledby="h-deals">
+        <div class="section-head">
+          <h2 id="h-deals">現金優惠</h2>
+          <p>套餐、1+1、甜心卡、分享盒與期間限定的買幾送幾。有效期間內，它們會壓低品項的「最便宜現金價」，點數的實際價值跟著變低。</p>
+        </div>
+        <div class="deals" id="deals"></div>
+      </section>
+
+      <section aria-labelledby="h-items">
+        <div class="section-head">
+          <h2 id="h-items">品項價格</h2>
+          <p>牌價與目前最便宜的現金取得方式。</p>
+        </div>
+        <div class="table-wrap">
+          <table class="items">
+            <thead>
+              <tr><th scope="col">品項</th><th scope="col" class="num">牌價</th><th scope="col" class="num">最便宜現金價</th><th scope="col">資料</th></tr>
+            </thead>
+            <tbody id="items"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-data">
+        <div class="section-head">
+          <h2 id="h-data">資料</h2>
+          <p>
+            正式資料放在 repo 的 <code>data/offers.json</code>。這裡改的只是這台瀏覽器的草稿：
+            確認無誤後下載，把檔案覆蓋回 repo。
+          </p>
+        </div>
+        <textarea id="editor" spellcheck="false" aria-label="offers.json 內容"></textarea>
+        <ul class="errors" id="editor-errors"></ul>
+        <div class="editor-actions">
+          <button type="button" id="btn-apply">套用為草稿</button>
+          <button type="button" id="btn-download">下載 offers.json</button>
+          <button type="button" id="btn-discard" class="quiet">捨棄草稿</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="method">
+      <h2>怎麼算的</h2>
+      <dl>
+        <dt>每點價值（牌價）</dt>
+        <dd>（品項牌價 − 要另外付的現金）÷ 點數</dd>
+        <dt>每點價值（實際）</dt>
+        <dd>
+          把牌價換成「最便宜現金價」，並假設已經有甜心卡。每個有效優惠的實付金額拆給裡面的品項：
+          同一類的（大薯配小薯、不同塊數的鷄塊）照份量拆，不同類的照牌價拆；每個品項取對自己最有利的搭配。
+        </dd>
+        <dt>回饋率</dt>
+        <dd>實際每點價值 × 每元可得點數。拿來比較不同點數，數字越高越划算。</dd>
+        <dt>點數折扣</dt>
+        <dd>期間內的兌換折扣（例如週年慶 8 折）直接乘在所需點數上。</dd>
+        <dt>資料日期</dt>
+        <dd>每筆資料標的是來源本身的日期，不是抓取日；來源沒寫日期就標「不明」。</dd>
+      </dl>
+      <p>標著「待確認」的數字來自第三方整理或搜尋結果，用之前請先在 APP 對過。品項價格與常駐優惠主要參考 <a href="https://susugo.codlin.me/">速速湊 SuSuGo</a>。</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

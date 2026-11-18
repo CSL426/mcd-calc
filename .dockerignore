@@ -1,0 +1,12 @@
+node_modules
+dist
+.git
+.gitignore
+.claude
+.remember
+.worktree
+tools
+*.md
+Dockerfile
+compose.yaml
+.dockerignore
