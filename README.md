@@ -28,7 +28,7 @@ docker compose up -d   # http://localhost:8080，改 port 用 WEB_PORT=xxxx
 
 Dockerfile 分兩段：`builder`（Node 26 LTS + pnpm，跑測試和打包，測試沒過就不出 image）→
 `runner`（nginx 1.30 stable，只放 `dist/` 和 `nginx.conf`）。
-nginx 對 `/assets/` 長期快取（檔名帶 hash），`/data/` 和頁面本身 `no-cache`，健康檢查在 `/healthz`。
+nginx 對 `/assets/` 長期快取（檔名帶 hash），`/data/` 和頁面本身 `no-cache`，健康檢查在 `/health`。
 
 ## CI/CD
 
@@ -37,19 +37,21 @@ nginx 對 `/assets/` 長期快取（檔名帶 hash），`/data/` 和頁面本身
 - 每次 push 和 PR：型別檢查 → 測試 → 打包。
 - 推到 `main` 且上面全過：build image，推到 `ghcr.io/csl426/mcd-calc`（公開，標籤 `latest` 和短 commit hash）。
 - 接著部署到 Cloud Run（`asia-east1`）：用 image digest 部署，`min-instances=0`（沒人用不收錢）、
-  `max-instances=1`（費用上限），部署後打 `/healthz` 確認。Cloud Run 直接拉 ghcr.io 的公開 image，
+  `max-instances=1`（費用上限），部署後打 `/health` 確認。Cloud Run 直接拉 ghcr.io 的公開 image，
   GCP 上不存 image。repo 還沒設 GCP 變數時，部署這段會自動跳過。
 
 ### 第一次設定 Cloud Run
 
-在已經 `gcloud auth login` 的機器上跑一次（帳單帳戶 ID 用 `gcloud billing accounts list` 查）：
+小專案共用作品集的 GCP 專案 `csl-portfolio`，各自一個 Cloud Run 服務。在已經 `gcloud auth login`
+的機器上跑一次：
 
 ```
-PROJECT_ID=mcd-calc-csl426 BILLING_ACCOUNT=XXXXXX-XXXXXX-XXXXXX bash tools/gcp-setup.sh
+PROJECT_ID=csl-portfolio SA_NAME=mcd-calc-deployer PROVIDER=github-oidc-mcd-calc bash tools/gcp-setup.sh
 ```
 
-它會開專案、綁帳單、啟用 API、建部署用 service account，並設好 Workload Identity Federation
-（只允許這個 repo，GitHub 上不存任何 GCP 金鑰）。最後印出三個值，設成 repo 的 Actions variables：
+它會啟用 API、建這個 repo 專用的部署 service account，並在既有的 WIF pool 加一個只允許這個 repo 的
+provider（不改同專案其他服務的設定，GitHub 上不存任何 GCP 金鑰）。要開獨立專案的話改給新的
+`PROJECT_ID` 和 `BILLING_ACCOUNT`。最後印出三個值，設成 repo 的 Actions variables：
 `GCP_PROJECT_ID`、`GCP_SA_EMAIL`、`GCP_WIF_PROVIDER`。之後每次推到 `main` 就會自動部署。
 
 建議另外在 GCP 帳單設一個低額預算警示。預算警示只寄信、不會停止扣款，費用上限靠 `max-instances=1`。

@@ -103,6 +103,6 @@ jobs:
           # 沒人用縮到 0 不收錢；最多 1 個，被灌流量時費用有上限
           flags: --port=80 --min-instances=0 --max-instances=1 --allow-unauthenticated
       - name: 健康檢查
-        run: curl --fail --silent --show-error --retry 5 --retry-delay 5 --retry-all-errors "${{ steps.deploy.outputs.url }}/healthz"
+        run: curl --fail --silent --show-error --retry 5 --retry-delay 5 --retry-all-errors "${{ steps.deploy.outputs.url }}/health"
       - name: 摘要
         run: echo "已部署到 ${{ steps.deploy.outputs.url }}" >> "$GITHUB_STEP_SUMMARY"
