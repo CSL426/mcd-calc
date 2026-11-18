@@ -37,6 +37,8 @@ jobs:
     permissions:
       contents: read
       packages: write
+    outputs:
+      digest: ${{ steps.build.outputs.digest }}
     env:
       # ghcr 的 image 名稱只能小寫，github.repository 是 CSL426/mcd-calc
       IMAGE: ghcr.io/csl426/mcd-calc
@@ -55,12 +57,52 @@ jobs:
           tags: |
             type=raw,value=latest
             type=sha,format=short
-      - uses: docker/build-push-action@v7
+      - id: build
+        uses: docker/build-push-action@v7
         with:
           context: .
           target: runner
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          # 只推一份單純的 manifest，digest 就是 Cloud Run 要拉的那個 image
+          provenance: false
+          sbom: false
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  deploy:
+    name: 部署到 Cloud Run
+    needs: image
+    # GCP 還沒設定好（沒有 repo variables）之前跳過，不讓 CI 變紅
+    if: vars.GCP_PROJECT_ID != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    concurrency:
+      group: deploy-cloud-run
+      cancel-in-progress: false
+    env:
+      REGION: asia-east1
+      SERVICE: mcd-calc
+    steps:
+      # Workload Identity Federation：不在 GitHub 存任何 GCP 金鑰
+      - uses: google-github-actions/auth@v3
+        with:
+          project_id: ${{ vars.GCP_PROJECT_ID }}
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_SA_EMAIL }}
+      - id: deploy
+        uses: google-github-actions/deploy-cloudrun@v3
+        with:
+          service: ${{ env.SERVICE }}
+          region: ${{ env.REGION }}
+          # 用 digest 部署，確保跑的就是這次 build 的那一份；ghcr.io 公開 image 可直接拉
+          image: ghcr.io/csl426/mcd-calc@${{ needs.image.outputs.digest }}
+          # 沒人用縮到 0 不收錢；最多 1 個，被灌流量時費用有上限
+          flags: --port=80 --min-instances=0 --max-instances=1 --allow-unauthenticated
+      - name: 健康檢查
+        run: curl --fail --silent --show-error --retry 5 --retry-delay 5 --retry-all-errors "${{ steps.deploy.outputs.url }}/healthz"
+      - name: 摘要
+        run: echo "已部署到 ${{ steps.deploy.outputs.url }}" >> "$GITHUB_STEP_SUMMARY"
