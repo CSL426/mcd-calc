@@ -1,5 +1,9 @@
 # 老麥計算機
 
+[![CI](https://github.com/CSL426/mcd-calc/actions/workflows/ci.yml/badge.svg)](https://github.com/CSL426/mcd-calc/actions/workflows/ci.yml)
+
+> 非官方工具，與麥當勞無任何從屬關係。價格與兌換點數以門市及官方 APP 為準。
+
 比較麥當勞點數（M Point、點點卡）每一點實際值多少錢，並把套餐、1+1、甜心卡、分享盒、
 期間限定的買幾送幾算進去。前提是已經有甜心卡。
 
@@ -25,6 +29,14 @@ docker compose up -d   # http://localhost:8080，改 port 用 WEB_PORT=xxxx
 Dockerfile 分兩段：`builder`（Node 26 LTS + pnpm，跑測試和打包，測試沒過就不出 image）→
 `runner`（nginx 1.30 stable，只放 `dist/` 和 `nginx.conf`）。
 nginx 對 `/assets/` 長期快取（檔名帶 hash），`/data/` 和頁面本身 `no-cache`，健康檢查在 `/healthz`。
+
+## CI/CD
+
+`.github/workflows/ci.yml`：
+
+- 每次 push 和 PR：型別檢查 → 測試 → 打包。
+- 推到 `main` 且上面全過：build image，推到 `ghcr.io/csl426/mcd-calc`（標籤 `latest` 和短 commit hash）。
+- 部署到 Cloud Run 尚未接上，需要先建 GCP 專案。
 
 ## 目錄
 
